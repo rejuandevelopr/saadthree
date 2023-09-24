@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./forms.css" >
+    <link
+     rel="stylesheet"
+     href="./build/css/intlTelInput.css"
+   />
+   <script src="./build/js/intlTelInput.min.js"></script>
+    <title>Forms</title>
+    <style>
+        .iti {
+            position: relative;
+            display: block; 
+        }
+    </style>
+  </head>
+  <body>
+    <div class="myForm">
+        <h2 class="title">This Form will help us 
+            <span class="indiv">individualize 
+                <svg xmlns="http://www.w3.org/2000/svg" width="155" height="21" viewBox="0 0 169 21" fill="none">
+                <path d="M166.328 5.48781C167.429 5.58268 168.398 4.76746 168.493 3.66698C168.587 2.56649 167.772 1.59746 166.672 1.50259L166.328 5.48781ZM1.55106 20.4178C27.5497 12.966 97.032 -0.486001 166.328 5.48781L166.672 1.50259C96.768 -4.5236 26.7837 9.02445 0.448941 16.5726L1.55106 20.4178Z" fill="#38B6FF"/>
+                </svg>
+            </span>
+            <br> 
+            your study experience
+        </h2>
+        <form class="needs-validation" novalidate="">
+            <!-- First row  -->
+            <div class="row mt-4">
+                <div class="col-md-4 mb-3 res_margin_two">
+                    <label for="lsatbefore">Did you take the LSAT before?</label>
+                    <button id="yesButton" class="btn btn-sm w-100">YES</button>
+                </div>
+                
+                <div class="col-md-4 mb-3">
+                    <label for="lsatbefore"></label>
+                    <button id="noButton" class="btn btn-sm w-100 res_margin">NO</button>
+                </div>
+                
+                <div class="col-md-4 mb-3">
+                    <label for="pastscore">What is your past score?</label>
+                    <input style="border-radius:10px;" type="number" class="form-control" id="pastscore" placeholder="120-180" value="" required="">
+                </div>
+            </div>
+            <!-- Second Row  -->
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <label for="lsatscore">Target LSAT score </label>
+                <input style="border-radius:10px;" type="text" class="form-control" id="lsatscore" placeholder="please be realistic" value="" required="">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="testdateyear">Target test date Year<strong class="text-danger">*</strong></label>
+                <select class="custom-select custom-select2 d-block w-100" id="testdateyear" required="">
+                    <option value="">2023</option>
+                    <option>2022</option>
+                    <option>2021</option>
+                </select>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="testdatemonth">Target test date Month<strong class="text-danger">*</strong></label>
+                <select class="custom-select d-block w-100" id="testdatemonth" required="">
+                    <option data-display="January">January</option>
+                    <option data-display="February">February</option>
+                    <option data-display="March">March</option>
+                    <option data-display="March">April</option>
+                    <option data-display="March">May</option>
+                    <option data-display="March">June</option>
+                    <option data-display="March">July</option>
+                    <option data-display="March">August</option>
+                    <option data-display="March">September</option>
+                    <option data-display="March">October</option>
+                    <option data-display="March">November</option>
+                    <option data-display="March">December</option>
+                </select>
+            </div>
+            </div>
+
+            <!-- Third row  -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="graduationyear">Graduation Year<strong class="text-danger">*</strong></label>
+                    <select class="custom-select d-block w-100" id="testdatemonth" required="">
+                        <option value="">2024</option>
+                        <option>2023</option>
+                        <option>2022</option>
+                        <option>2021</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="major">Major</label>
+                    <select class="custom-select d-block w-100" id="testdatemonth" required="">
+                        <option value="">2024</option>
+                        <option>2023</option>
+                        <option>2022</option>
+                        <option>2021</option>
+                    </select>
+
+                </div>
+            </div>
+            <!-- Fourth row  -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="phone">Phone Number<strong class="text-danger">*</strong></label><br>
+                    <input id="phone" type="tel" class="form-control" placeholder="xxx-xxx-xxx" name="phone" style="display: inline-block; border-radius: 10px;" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="notification">Would you like to receive schedule notifications?</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button id="yesBtnNot" class="btn btn-sm btn-outline w-100">YES</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button id="noBtnNot" class="btn btn-sm btn-outline w-100">NO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fifth row  -->
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="phone"> Select your Weak section(s)<strong class="text-danger">*</strong></label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button id="allSection" class="btn btn-sm btn-outline w-100">All 3 Sections</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button id="logicReason" class="btn btn-sm btn-outline w-100">Logical Reasoning</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button id="readComp" class="btn btn-sm btn-outline w-100">Reading Comp</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button id="logicGames" class="btn btn-sm btn-outline w-100">Login Games</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="mb-4">
+
+            <div class="container d-flex justify-content-end">
+                <button class="btn btn-sm btn-outline skipBtn" type="button">Skip</button>
+                <button class="btn btn-sm submitBtn ml-2 ms-3" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+          utilsScript:
+            "./build/js/utils.js",
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const yesButton = document.getElementById('yesButton');
+            const noButton = document.getElementById('noButton');
+            const pastScoreInput = document.getElementById('pastscore');
+            const pastScoreLabel = document.querySelector('label[for="pastscore"]');
+
+            yesButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                yesButton.classList.add('active');
+                noButton.classList.remove('active');
+                yesButton.innerHTML = 'YES <i class="fas fa-check-circle text-info"></i>';
+                noButton.innerHTML = 'NO';
+
+                // Enable the past score input field
+                pastScoreInput.disabled = false;
+
+                // Unmute the label
+                pastScoreLabel.classList.remove('text-muted');
+            });
+
+            noButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                noButton.classList.add('active');
+                yesButton.classList.remove('active');
+                noButton.innerHTML = 'NO <i class="fas fa-check-circle text-info"></i>';
+                yesButton.innerHTML = 'YES';
+
+                // Disable the past score input field
+                pastScoreInput.disabled = true;
+
+                // Mute the label
+                pastScoreLabel.classList.add('text-muted');
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const yesButton = document.getElementById('yesBtnNot');
+            const noButton = document.getElementById('noBtnNot');
+
+            yesBtnNot.addEventListener('click', function(event) {
+                event.preventDefault();
+                yesBtnNot.classList.add('active');
+                noBtnNot.classList.remove('active');
+                yesBtnNot.innerHTML = 'YES <i class="fas fa-check-circle text-info"></i>';
+                noBtnNot.innerHTML = 'NO';
+            });
+
+            noBtnNot.addEventListener('click', function(event) {
+                event.preventDefault();
+                noBtnNot.classList.add('active');
+                yesBtnNot.classList.remove('active');
+                noBtnNot.innerHTML = 'NO <i class="fas fa-check-circle text-info"></i>';
+                yesBtnNot.innerHTML = 'YES';
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const allSection = document.getElementById('allSection');
+            const logicReason = document.getElementById('logicReason');
+            const readComp = document.getElementById('readComp');
+            const logicGames = document.getElementById('logicGames');
+
+            allSection.addEventListener('click', function(event) {
+                event.preventDefault();
+                allSection.classList.add('active');
+
+                logicReason.classList.remove('active');
+                readComp.classList.remove('active');
+                logicGames.classList.remove('active');
+
+                allSection.innerHTML = 'All 3 Sections <i class="fas fa-check-circle text-info"></i>';
+                logicReason.innerHTML = 'Logic Reasoning';
+                readComp.innerHTML = 'Reading Comp';
+                logicGames.innerHTML = 'Logic Games';
+            });
+            logicReason.addEventListener('click', function(event) {
+                event.preventDefault();
+                logicReason.classList.add('active');
+
+                allSection.classList.remove('active');
+                readComp.classList.remove('active');
+                logicGames.classList.remove('active');
+
+                logicReason.innerHTML = 'Logic Reasoning <i class="fas fa-check-circle text-info"></i>';
+
+                allSection.innerHTML = 'All 3 Sections';
+                readComp.innerHTML = 'Reading Comp';
+                logicGames.innerHTML = 'Logic Games';
+            });
+            readComp.addEventListener('click', function(event) {
+                event.preventDefault();
+                readComp.classList.add('active');
+
+                allSection.classList.remove('active');
+                logicReason.classList.remove('active');
+                logicGames.classList.remove('active');
+
+                readComp.innerHTML = 'Reading Comp <i class="fas fa-check-circle text-info"></i>';
+                allSection.innerHTML = 'All 3 Sections';
+                logicReason.innerHTML = 'Logic Reasoning';
+                logicGames.innerHTML = 'Logic Games';
+            });
+            logicGames.addEventListener('click', function(event) {
+                event.preventDefault();
+                logicGames.classList.add('active');
+
+                allSection.classList.remove('active');
+                logicReason.classList.remove('active');
+                readComp.classList.remove('active');
+
+                logicGames.innerHTML = 'Logic Games <i class="fas fa-check-circle text-info"></i>';
+                allSection.innerHTML = 'All 3 Sections';
+                logicReason.innerHTML = 'Logic Reasoning';
+                readComp.innerHTML = 'Reading Comp';
+            });
+        });
+    </script>
+
+</body>
+</html>
